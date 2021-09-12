@@ -1,0 +1,360 @@
+body{
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    /* display:grid; */
+    /* grid-auto-rows: minmax(150px, auto); */
+    /* grid-template-columns:  */
+    height:100vh;
+    /*background: #f23557;*/
+    color: white;
+    justify-content: center;
+    /* grid-gap: 2em; */
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+}
+
+.entry{
+    width: 9  0%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    background: rgba(59, 74, 107, 0.5);
+    font-size: 150%;
+    padding: 10px;
+    opacity:0; /* Hidden by default */
+}
+
+.visible{
+  opacity:1;
+  transition: opacity 0.5s;
+}
+
+.invisible{
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+#entryHolder{
+  font-size: 90%;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+#location {
+display:inline-block;
+}
+
+#flag{
+  display: inline-block;
+  float:right;
+}
+
+.headline {
+  margin-top: 1em;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+  color:white;
+}
+.title{
+  display:inline-block;
+  padding: 5px;
+}
+
+.close{
+    padding: 5px;
+    display: inline-block;
+    float:right;
+    cursor:pointer;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 2px black;
+    /* margin-left: 1em; */
+    text-align: center;
+}
+
+input{
+    display:block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    height: 3em;
+    background:rgba(0,0,0,0.5);
+    color: white;
+    font-size: 125%;
+    font-family: 'Oswald', sans-serif;
+    text-indent: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+button{
+    display: block;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    height: 2em;
+    background: #3b4a6b;
+    color: white;
+    font-size: 2em;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px black;
+    cursor: pointer;
+}
+
+button:active{
+  transform: translateY(3px);
+  box-shadow: 0px 0px 0px black;
+}
+
+button:hover{
+  box-shadow: 0px 0px 10px 10px white;
+}
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    display: block;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    background:rgba(0,0,0,0.5);
+    color: white;
+    font-size: 125%;
+    font-family: 'Oswald', sans-serif;
+    text-indent: 5px;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */
+    color: white;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+@media only screen and (max-width: 320px){
+  .entry{
+      width: 90%;
+      border-radius: 5px;
+      background: rgba(59, 74, 107, 0.5);
+      font-size: 100%;
+  }
+
+  .headline {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label{
+      font-size: 1em;
+      text-shadow: 2px 2px 2px black;
+  }
+
+  input{
+      width: 80%;
+      margin-bottom: 1em;
+      height: 2em;
+      font-size: 100%;
+      text-indent: 5px;
+      border-radius: 5px;
+  }
+
+  button{
+      width: 25%;
+      margin-bottom: 1em;
+      height: 2em;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+  }
+
+  textarea{
+      border-radius: 5px;
+      width: 80%;
+      margin-bottom: 1em;
+      font-size: 100%;
+      text-indent: 5px;
+  }
+}
+
+@media only screen and (max-width: 360px){
+  .entry{
+      width: 90%;
+      border-radius: 5px;
+      background: rgba(59, 74, 107, 0.5);
+      font-size: 100%;
+  }
+
+  .headline {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label{
+      font-size: 1em;
+      text-shadow: 2px 2px 2px black;
+  }
+
+  input{
+      width: 80%;
+      margin-bottom: 1em;
+      height: 2em;
+      font-size: 100%;
+      text-indent: 5px;
+      border-radius: 5px;
+  }
+
+  button{
+      width: 25%;
+      margin-bottom: 1em;
+      height: 2em;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+  }
+
+  textarea{
+      border-radius: 5px;
+      width: 80%;
+      margin-bottom: 1em;
+      font-size: 100%;
+      text-indent: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .entry{
+      width: 90%;
+      border-radius: 5px;
+      background: rgba(59, 74, 107, 0.5);
+      font-size: 100%;
+  }
+
+  .headline {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label{
+      font-size: 1em;
+      text-shadow: 2px 2px 2px black;
+  }
+
+  input{
+      width: 80%;
+      margin-bottom: 1em;
+      height: 2em;
+      font-size: 100%;
+      text-indent: 5px;
+      border-radius: 5px;
+  }
+
+  button{
+      width: 25%;
+      margin-bottom: 1em;
+      height: 2em;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+  }
+
+  textarea{
+      border-radius: 5px;
+      width: 80%;
+      margin-bottom: 1em;
+      font-size: 100%;
+      text-indent: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 640px){
+  .entry{
+      width: 90%;
+      border-radius: 5px;
+      background: rgba(59, 74, 107, 0.5);
+      font-size: 100%;
+  }
+
+  .headline {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label{
+      font-size: 1em;
+      text-shadow: 2px 2px 2px black;
+  }
+
+  input{
+      width: 80%;
+      margin-bottom: 1em;
+      height: 2em;
+      font-size: 100%;
+      text-indent: 5px;
+      border-radius: 5px;
+  }
+
+  button{
+      width: 25%;
+      margin-bottom: 1em;
+      height: 2em;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+  }
+
+  textarea{
+      border-radius: 5px;
+      width: 80%;
+      margin-bottom: 1em;
+      font-size: 100%;
+      text-indent: 5px;
+  }
+}
